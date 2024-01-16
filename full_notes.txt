@@ -1,0 +1,602 @@
+
+
+........... 
+========================================================================================================================================================
+Agile Model- (is a process define modle) latest module for software developing
+
+it is mixed of iterative and incremental model.
+iterative model-doing same process again and again
+incremental model-keep on adding new feachers(module)in existing module.
+----------
+how it work fast ?
+- as we develope module we delivere it to the costomer so costomer no need to wait for
+long time. and again new version is added to it with some features.
+and also if any changes we can easily update according to costomer at any stage.
+
+there will be good communication between costomer, developer and tester.
+------------
+dis advantages-less documentation (but more no. of meetings)
+
+
+
+
+----------------------------------
+
+scrum  (is a frame work through which we develope and test a software and release to the costomer)
+it will help us to design and develope software is form of agile process principles.
+
+scrum team :-
+1)product owner- (he is a man between developing all teams and the costomer)it define feature of the product and is always in contact with costomer.
+      he set's all features, and pririotised all functions
+      he can accept or reject he will check work flow is meeting to costomer requirment
+
+2)scrum master- (hunter) he mainly drive agil process and make every one to do given work
+                any miss communication or any blocker he will solve issues and make flow of agil 
+3)development team - develope software
+4)QA team - test software
+
+-----------------------------
+scrum terminology
+
+>user story - module in a software (product owner which define functionality in a form of user stories/ epics )
+>epic - is collection of multiple user stories
+>product backlock - is document has all the stories (user + epices) can be form of exel /list is call -
+........
+>1 sprint/iteration - is a period of time to complete user stories(it mean all design, development, and testing) time decide by product owner and team 
+>sprint planning meeting - decide what to delivere in sprint
+>sprint backlock - perticular story in one sprint is writen in sprint backlock (not all product backlock stories it content many stories there fore)
+                    for specific sprint
+
+>scrum meeting- every day 15 min meeting by scrum master every boday say what task complet and blockers
+>main 3 question - what you do yesterday , today and any blocker
+ >sprint retrospective meeting - only onse after completing of every (single) sprint cycle all team d,t,po.
+...............
+>story point - rough estimation of user stories , so base on product backlog all stories developer and tester will pick stroies to do work
+     eg: developer will say i require this much of time to do this work is call-
+          this is given by d and t 
+        given in fibonacci series form-0112358......
+      1 story point = 1hours/1 day(6 hrs)
+    there fore if d say 5 story points is equal to 5 hours
+
+>burn down charts- shows remaining work in sprint and maintain by scrum master also calculate story points
+
+
+======================================================================================================================================
+
+******file*******
+import java.io.filewriter/file/*;
+exception--catch(IOException i){sop(i)}
+or- e.printStackTrace();
+
+class - file(),
+class(make object) use to write in file--filewriter(-path\\name\\extension),  bufferedwriter(),
+FileOutputStream()--to create and write data,  PrintWriter(),
+
+class(make object) use to read in file--fileReader(),BufferedReader(),,FileInputStream()--use to read data
+                                               ScannerClass()
+r.read()--reads one one characters
+r.readLine()--reads one complet sentence
+
+
+file methodes
+
+f.write("hi")
+f.close()
+f.getName()
+f.getAbsolutePath()
+f.canWrite() -t/f
+f.canRead() -t/f
+f.length()-give size of file
+f.delete()
+
+file f=new...
+file r=new...
+rename--  f.renameTo(r)
+
+* creat exel file
+create = HSSFworkbook ->  workbook.sheet -> sheet.row -> row.createcell() .setcellvalue() ->  workbook.write() ->  workbook.close
+
+* create csv file
+
+
+====================================================================================================================================
+
+JDBC
+
+---------to creat connection and insert data 
+
+public static void main(String[] args){
+    String url="jdbc:mysql://localhost:3306/test";
+    String user="root";
+    String password="shubham";
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection connection=DriverManager.getConnection(url,user,password);
+        System.out.println("connection successfull");
+        String query="Insert into student(id,name,age,city)value(101,'shubh',22,'pune'),(102,'yogesh',23,'mumbai'),(103,'akshay',24,'delhi')";
+        Statement statement=connection.createStatement();
+        statement.execute(query);
+
+    } catch (ClassNotFoundException e) {
+        throw new RuntimeException(e);
+    } catch (SQLException e) {
+        throw new RuntimeException(e);
+    }
+ 
+====================================================================================================================================================
+  ****** GIT********************
+git --version
+git help config / git config --help
+mkdir test (make new directory test)
+cd test (go inside test directory)
+git init (to initialized test directory)
+git status (to see which file in it)
+git add demo.txt (to add file)
+git commit -m "massage"
+clear
+git fetch --All (show all branches)
+git config --global user.username _write user name_-github 
+(to connect git to git hub , now git is sucessfully link with git hub)
+ 
+--git hub
+(now creat new repository -> copy link -> and know link local and remote repository)
+git remote add origin ===past link==
+git push origin master (now to push local file to remote reprository)
+
+
+
+---***for new git account
+*git config --global user.username "shubham7751"
+*git config --global user.email "shubham.jawale@neutrinotechlabs.com"
+*git config --list
+*touch file.txt  (creat folder-)
+
+track file=can push in git and able to hold any change in futher in github
+untract filr= can not push in git hub and no change save
+
+:. to make untrack file to track file 
+*git add ===file name==
+*git add . (to add all file present in this folder)
+
+*git commit -m "first commit"
+
+if any change done :. status shown red :. do git add.
+
+then final commit - git commit -m "after changes"
+*git remote add origin ====link===
+(now thin origin is name of whole link)
+so if you type git remote -> git name= origin
+
+
+*git push -u origin main/master(name of master branch)
+
+---------------------------------------------------------------------------------------------------------------
+git switch -c  ===branch name===   (to switch master to local branch) & to check    - git checkout ===branch name===
+git remote -v (in which repo we are)
+git remote remove origin
+
+---------------------------------
+1>git init
+2>git add .
+3>git status (check)
+4>git branch -M main
+5>git remote add origin https://github.com/shubham7751/newrepo.git
+6>git remote -v (check repo name) if another -> git remote remove origin ->add 4>
+7>git commit -m "first commit"
+8>git push -u origin main
+ if error( ^ put  -f for force fully push)
+----------------------------------
+error =src refspec master does not match any
+(if not commit , untrack file or wrong sentact)
+
+
+=============================================================================================================================
+API
+
+
+Types of api-SOAP(only XML),REST(support XML,JSON,HTML,TEXT,etc.)
+-web services - when api kept on web for same function but for public is call web services
+fb and google communicate using api 
+-rest api-having methods (get,post,put,delete) all are http request
+REST(representation state transfer) provide more flexibility
+eg : payment getway,google maps
+
+HTTP-REQUESTS
+-get- retrive(fetch) data
+-post-create resource on database
+-put-update (all)existing resources,for use need ID-of post request 
+-patch-update (partial) details
+-delete- for use just pass ID
+
+-Validation----
+-status code-
+200-ok,
+201-create
+202-accepted
+203-non-Authoritative info
+204-No content
+  
+
+400-bad request
+401-unauthorised-401
+402-forbidden-402
+403-notfound-403
+404-conflict-404
+                  
+500-internal server error,
+501-time
+502-size 
+503-cookies
+504-headers - info of request
+
+^ to test these we use -> assertions-validation
+-pm-library -eg : pm.function name from pm library
+-functions - normal, arro 
+----syntax-----
+ pm.test("test name",() => {.....//assertion....});
+-----------------
+
+
+-java script
+
+*JSON (java script object notation)
+between clint and server transfer mainly use json file (human readable) 
+is syntax for storing and exchanging data
+extension-.json
+formate- object:value
+
+-------------------------------------------------------------------------
+consol.log('pre request script')-->to display at consol window
+
+*variables {{ URL }}
+it content some data
+why we need?
+-to avoid duplication,redundency,rework
+
+*types -(base on accessibility)
+-global-can access every where with in workspace
+        
+-environment- to use perticular variable :.switch to that environment
+          
+-collection-can access only in collection
+
+-local-
+-data-
+
+*newman run command =newman run C:\Users\NTS-ShubhamJawale\collectionex\mycoll.json
+if error=collection could not be loaded
+do-C:\Users\NTS-ShubhamJawale>cd collectionex(file name)
+  -C:\Users\NTS-ShubhamJawale\collectionex>newman run "newcoll3.json"
+                
+
+---------------------------------------------------------------------------
+pm.test("status code is 200", () =>{
+    pm.response.to.have.status(200);
+})
+
+
+
+
+------------------------------------------------------------------------------------------
+*postman
+--in GET -> post
+(in get test)
+bodydata=JSON.parse(responseBody)
+value=bodydata.data[1].id
+console.log(value)
+pm.environment.set("ID",value);
+------------------------
+-- in post -> get
+(in post test)
+var jsonData=JSON.parse(responseBody);
+pm.environment.set("id",jsonData.id);
+
+
+=================================================================================================
+    
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+ Selenium (mukesh otwani)
+=============================================================================================================
+System.setProperty("webdriver.crome.driver","C:\\Users\\NTS-ShubhamJawale\\Downloads\\chromedriver_win32\\chromedriver.exe");
+
+WebDriver driver=new CromeDriver();
+driver.get("http:\\www.facebook.com");
+driver.manage().window().maximize();
+
+driver.findElement(By.xpath("====").sendKeys("test Selenium");
+or
+driver.findElement(By.xpath("====").click();
+                                                             
+******click()
+======use with
+-checkboxes
+-radiobutton
+-links
+
+*****select class( to handle drop downs )
+
+Select sel1=new Select(driver.findElement(By.xpath("==="));
+(index)
+sel1.selectByIndex(4);
+or(text)
+sel1.selectByVisibleText("March")
+or(value)
+sel1.selectByValue(6);
+
+****navigate(fordward/backward)
+driver.navigate().back();
+
+driver.quit();->close the browser
+
+==================================================================
+********Alart
+driver.findElement(By.id("==alert ele====")).click();
+driver.SwitchTo().alert().accept();
+driver.SwitchTo().alert().dismiss();
+driver.SwitchTo().alert().sendKeys("===");
+driver.SwitchTo().alert().getText();s
+===============================================================
+******Get ele info from attribute
+Web ele.ABC=driver.FindElement(By.Id("=="))
+ABC.getText();
+ABC.getTagname();
+ABC.getAttribute();
+ABC.isDisplayed();
+ABC.isEnables();
+
+sout(driver.getTitle());
+sout(driver.getCrruntUrl());
+
+======================================================================================================================================
+*******Test NG*******************************
+copy dependencies in maven pom.xml
+-> to execute those test cases form different class :. need to configure test cases
+
+
+class{
+WebDriver driver=new CromeDriver
+@Before test
+method(){--(url)--}
+@test(Priority=1)/alphabetical execute
+method(){-----}
+@test()
+method(){-----}
+@AfterTest
+method(){--driver.quit()---}
+}
+
+or
+WebDriverManager.edgedriver().setup();
+           driver=new EdgeDriver();
+--------------------------------------
+testNG xml file--for configuration
+
+
+
+(By: ctr + F)       ->     x-path ://input[@type='--value--']
+=========================================================
+**********weight
+driver.manage().timeouts().implicitlyWait(5,TimeUnit.Seconds);
+=====================================================
+**********Assertion -> import org.testing.Assert
+
+
+
+
+----->Hard Assertion- if test fail/false statment immediatly it stops no futher execution of statments
+Assert.assertTrue(true);-> if true print pass/fail  
+Assert.assertEquals("A","A");->true statement -pass 
+eg:Assert.assertEquals(ExpTitle,driver.getTitle());
+1)Assert.assertEquals(ExpTitle,driver.getTitle());
+2)Assert.assertTrue(abc.isDisplayed());
+3) fales
+
+
+
+------>soft assertion - even test fail then also it proceed to next test
+SoftAssert SA=new SoftAssert();
+SA.assertTrue(true);
+SA.assertEquals("","");
+SA.assertAll(); 
+==================================================================
+*****paramiterization
+by using testng xml file we can pass parameter to tests
+@BeforeTest
+        @Parameters({"browser","url"})
+
+          public void setUp(String b,String u) throws NullPointerException {
+           WebDriverManager.edgedriver().setup();
+           driver=new EdgeDriver();
+                driver.get(u);
+        driver.manage().window().maximize();
+
+=====================================================================
+**********Data Provoider
+@DataProvider(name="LoginData")
+public String [][] getData()
+{
+    String loginData[][]={
+{"",""}
+{"",""}
+{"",""}
+                          };
+return loginData;}
+
+
+@Test(dataProvider="LoginData")
+public void loginTest(String user,String pass)
+{ driver.get();
+
+=========================================================
+*****Listeners
+after running test from test case if want to perform any
+action :. need listeners
+
+when use= when test->fail,success,skipped,start
+
+*types
+IAnnotationTransformer (doc, javadoc)
+IAnnotationTransformer2 (doc, javadoc)
+IHookable (doc, javadoc)
+IInvokedMethodListener (doc, javadoc)
+IMethodInterceptor (doc, javadoc)
+IReporter (doc, javadoc)
+ISuiteListener (doc, javadoc)
+ITestListener (doc, javadoc)
+
+
+
+==================================================================================
+*********read data from excel
+
+*****************send key from excel file
+
+
+
+
+public class DataDrivenExcel {
+public static void main(String[] args) {
+WebDriver driver;
+
+
+
+WebDriverManager.chromedriver().setup();
+driver = new ChromeDriver();
+
+
+driver.get("https://www.saucedemo.com/v1/");
+driver.manage().window().maximize();
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+System.out.println("URL Fetch SucessFully");
+
+
+
+try {
+
+FileInputStream file = new FileInputStream("C:\\Users\\NTS-Akshay Bokhare\\Desktop\\data.xlsx");
+XSSFWorkbook workbook = new XSSFWorkbook(file);
+XSSFSheet sheet = workbook.getSheet("Sheet1");
+//TO Get Row Count
+int rowCount = sheet.getLastRowNum();
+//TO Get column Count
+int columnCount = sheet.getRow(1).getLastCellNum();
+
+for (int i = 1; i <= rowCount; i++) {
+XSSFRow cellData = sheet.getRow(i);
+String userName = cellData.getCell(0).getStringCellValue();
+String passWord = cellData.getCell(1).getStringCellValue();
+
+System.out.println("UserName is --> " + userName);
+System.out.println("passWord is --> " + passWord);
+
+
+
+driver.findElement(By.id("user-name")).sendKeys(userName);
+driver.findElement(By.id("password")).sendKeys(passWord);
+driver.findElement(By.id("login-button")).click();
+
+driver.navigate().refresh();
+
+}
+
+
+} catch (FileNotFoundException e) {
+throw new RuntimeException(e);
+} catch (IOException e) {
+throw new RuntimeException(e);
+
+
+
+======================================================================================
+*******J meter*****
+====================================================================================
+
+*to test performance load 
+->thread groups-is a group of thered whoch send towards server to test server taking request capacity.
+->Samplers- is which type of request we are going to send to server like HTTP,FTP.etc.
+->Listeners-it generate report is list,tabular,graph,etc.formate of send the test request act.
+->configuration-it specify common varibles which are use is samplers.
+
+
+*extension of test plane is .jmx
+-------------------------------------------
+*timer
+ to give time between request are send
+->constant timer-time for all request in thread group
+  can give timer for group / perticular request
+
+->uniform random timer-
+
+
+
+--------------------------------------------------------------------------
+*assertion
+to mesure responce after giving request in diff aspects like its size in bytes,json,x-path,
+and give message ok if responce sucessful
+
+
+--------------------------------------------------------------------------------------
+jmeter recording
+----------------------------------------------------------
+**Controller
+use to call request if needed like call login twice before register and opean home pg call multiple times
+->simple controller- is just a controller having multiple requests
+->test fragment-same of simple controller
+->module controll- use to call other controll 
+->include controller- same as module it also call other controll which scripte already saved
+
+->random controller-if two request under random controll :.it picks request randomly
+->random order controller-in random but in order of it's 1,2,3 /321 
+->interleave controller-first choos 1 then after next round 2 not random give each request chance for perticular round
+->throughput controll- distribute total   user request ,some to home page ,some to index page....ect
+--------------------------------------------------------------------------------------------------------------------------------------
+*parameterization
+to pass certain parameters with requests
+
+->interal parameters-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+****** GIT********************
+git --version
+git help config / git config --help
+mkdir test (make new directory test)
+cd test (go inside test directory)
+git init (to initialized test directory)
+git status (to see which file in it)
+git add demo.txt (to add file)
+git commit -m "massage"
+clear
+git fetch --All (show all branches)
+git config --global user.username _write user name_-github 
+(to connect git to git hub , now git is sucessfully link with git hub)
+ 
+--git hub
+(now creat new repository -> copy link -> and know link local and remote repository)
+git remote add origin ===past link==
+git push origin master (now to push local file to remote reprository)
+
+
+
+---***for new git account
+*git config --global user.username "shubham7751"
+*git config --global user.email "shubham.jawale@neutrinotechlabs.com"
+*git config --list
+*touch file.txt  (creat folder-)
+
+track file=can push in git and able to hold any change in futher in github
+untract filr= can not push in git hub and no change save
+
+:. to make untrack file to track file 
+*git add ===file name==
+*git add . (to add all file present in this folder)
+
+*git commit -m "first commit"
+
+if any change done :. status shown red :. do git add.
+
+then final commit - git commit -m "after changes"
+*git remote add origin ====link===
+(now thin origin is name of whole link)
+so if you type git remote -> git name= origin
+
+
+*git push -u origin main/master(name of master branch)
+
+---------------------------------------------------------------------------------------------------------------
+git switch -c  ===branch name===   (to switch master to local branch) & to check    - git checkout ===branch name===
+git remote -v (in which repo we are)
+git remote remove origin
+
+---------------------------------
+1>git init
+2>git add .           or git add demo.txt (to add file)
+3>git status (check)
+4>git branch -M main
+5>git remote add origin https://github.com/shubham7751/newrepo.git
+6>git remote -v (check repo name) if another -> git remote remove origin ->add 4>
+7>git commit -m "first commit"
+8>git push -u origin main  (see name master/main -put that)
+ if error( ^ put  -f for force fully push)
+----------------------------------
+error =src refspec master does not match any
+(if not commit , untrack file or wrong sentact)
+
+
+
+

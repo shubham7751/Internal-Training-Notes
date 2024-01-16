@@ -1,0 +1,37 @@
+
+
+selenium frame work
+==========================================================================================================================================
+why-for maintanibility,reuseability,good orginations of files.
+-----------------------
+*project structure
+----------------------
+-Base :has imp common methodes (required driver refreance)
+-Utilities :common (methods that do not required direct driver refrence) 
+use by other testcases
+-TestCase
+-Configuration file :ditails which we no need to go in script and change eg:crome browser
+-TestData :data which required for testcases eg: user firstname,lastname....
+-Logs : to see where test fail
+-Reports :has reports to send project lead
+-------------------------
+*Dependencies
+---------------------------
+-Selenium Webdriver
+-TestNG
+-ReportNg
+-Logs log4j
+-ApachePOI
+-Webdriver Manager
+--------------------------
+
+
+
+
+***********apache dependencies
+
+apache poi
+poi-ooxml
+poi-ooxml-schemas
+xmlbeans
+commons-collections4
